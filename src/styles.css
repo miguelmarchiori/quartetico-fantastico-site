@@ -25,7 +25,7 @@ button { font: inherit; }
 ::selection { color: #fff; background: #146bd0; }
 .shell { width: min(var(--shell), calc(100% - 64px)); margin-inline: auto; }
 
-.hero-section { min-height: 800px; height: max(760px, 100svh); position: relative; overflow: hidden; isolation: isolate; background: #020711; }
+.hero-section { min-height: max(760px, 100svh); position: relative; overflow: hidden; isolation: isolate; background: #020711; }
 .hero-video, .hero-scrim, .hero-grid { position: absolute; inset: 0; width: 100%; height: 100%; }
 .hero-video { z-index: -3; object-fit: cover; opacity: .48; filter: saturate(.82) contrast(1.08); }
 .hero-scrim { z-index: -2; background: linear-gradient(90deg, rgba(2,7,17,.96), rgba(2,9,22,.76) 48%, rgba(2,8,19,.54)), linear-gradient(0deg, #030914, transparent 32%, rgba(2,7,17,.24)); }
@@ -57,7 +57,7 @@ button { font: inherit; }
 .hero-kicker, .eyebrow { color: #79cfff; font-size: 10px; font-weight: 700; letter-spacing: .2em; }
 .hero-kicker { margin: 0 0 21px; }
 .hero-title-wrap h1 { max-width: 980px; margin: 0; color: #f6f9ff; font: 500 clamp(48px, 7.7vw, 110px)/.93 'Space Grotesk', Inter, sans-serif; letter-spacing: -.075em; }
-.shiny-text { display: inline-block; color: transparent; background-image: linear-gradient(100deg, #64cefb 0%, #64cefb 34%, #fff 49%, #64cefb 61%, #64cefb 100%); background-size: 220% 100%; background-position: 120% 50%; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.shiny-text { display: inline-block; padding-bottom: .14em; margin-bottom: -.14em; color: transparent; background-image: linear-gradient(100deg, #64cefb 0%, #64cefb 34%, #fff 49%, #64cefb 61%, #64cefb 100%); background-size: 220% 100%; background-position: 120% 50%; background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .hero-description { max-width: 550px; margin: 26px 0 0; color: rgba(221,233,250,.72); font-size: 14px; line-height: 1.85; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 29px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 15px; padding: 14px 21px; border-radius: 999px; font-size: 12px; font-weight: 600; transition: transform .25s ease, background .25s ease, border-color .25s ease, color .25s ease; }
@@ -98,8 +98,9 @@ button { font: inherit; }
 
 .rescue-section { background: #071326; overflow: hidden; }
 .rescue-section::before { content: ''; position: absolute; top: -240px; right: -150px; width: 650px; height: 650px; border: 1px solid rgba(64,142,240,.08); border-radius: 50%; box-shadow: 0 0 0 80px rgba(64,142,240,.018), 0 0 0 160px rgba(64,142,240,.012); pointer-events: none; }
-.section-heading-row { display: flex; justify-content: space-between; align-items: end; gap: 60px; }
-.section-heading-row > p { max-width: 410px; margin: 0 0 5px; color: #9eafc7; font-size: 13px; line-height: 1.9; }
+.section-heading.section-heading-row { max-width: none; display: flex; justify-content: space-between; align-items: end; gap: 60px; }
+.section-heading-row > div { flex: 1 1 auto; }
+.section-heading.section-heading-row > p { flex: 0 1 410px; max-width: 410px; margin: 0 0 5px; color: #9eafc7; font-size: 13px; line-height: 1.9; }
 .stage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 68px; }
 .stage-card { position: relative; min-height: 290px; padding: 28px 28px 36px; border: 1px solid rgba(120,165,225,.17); background: linear-gradient(145deg, rgba(16,39,70,.65), rgba(4,15,31,.48)); overflow: hidden; }
 .stage-card::after { content: ''; position: absolute; right: -80px; bottom: -120px; width: 210px; height: 210px; border-radius: 50%; background: rgba(23,117,227,.12); filter: blur(35px); transition: opacity .3s ease; opacity: .5; }
@@ -117,7 +118,7 @@ button { font: inherit; }
 .section-heading { max-width: 830px; }
 .section-heading > p { max-width: 520px; margin: 24px 0 0; color: #9eafc7; font-size: 13px; line-height: 1.9; }
 .tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 60px; }
-.tech-card { min-height: 295px; position: relative; padding: 30px; border: 1px solid rgba(120,165,225,.16); background: linear-gradient(150deg, rgba(14,35,64,.62), rgba(4,13,28,.54)); overflow: hidden; }
+.tech-card { min-height: 295px; position: relative; padding: 30px 30px 76px; border: 1px solid rgba(120,165,225,.16); background: linear-gradient(150deg, rgba(14,35,64,.62), rgba(4,13,28,.54)); overflow: hidden; }
 .tech-icon { display: grid; place-items: center; width: 48px; height: 48px; margin-bottom: 30px; border: 1px solid rgba(92,232,255,.32); border-radius: 14px; background: rgba(22,118,232,.12); color: var(--cyan); }
 .tech-card .eyebrow { font-size: 8px; }
 .tech-card h3 { margin: 9px 0 12px; font: 500 23px 'Space Grotesk', sans-serif; }
@@ -200,10 +201,10 @@ button { font: inherit; }
   .about-grid { grid-template-columns: 1fr; gap: 22px; }
   .about-copy { max-width: 620px; padding-top: 0; }
   .about-bottom { margin-top: 70px; }
-  .section-heading-row { align-items: start; flex-direction: column; gap: 25px; }
-  .section-heading-row > p { max-width: 570px; }
-  .achievement-panel { grid-template-columns: 1fr; gap: 25px; }
-  .achievement-badge { position: absolute; right: -45px; bottom: -65px; width: 235px; height: 235px; opacity: .33; }
+  .section-heading.section-heading-row { align-items: start; flex-direction: column; gap: 25px; }
+  .section-heading.section-heading-row > p { flex: none; max-width: 570px; }
+  .achievement-panel { grid-template-columns: 1fr; gap: 10px; min-height: 0; }
+  .achievement-badge { width: 230px; height: 230px; }
   .badge-core { width: 140px; height: 140px; }
   .contact-inner { align-items: start; flex-direction: column; }
   .contact-side-note { margin-top: 15px; }
@@ -242,13 +243,13 @@ button { font: inherit; }
   .stage-grid, .tech-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 40px; }
   .stage-card { min-height: 240px; padding: 24px; }
   .stage-card h3 { margin-top: 35px; }
-  .tech-card { min-height: 250px; padding: 24px; }
+  .tech-card { min-height: 250px; padding: 24px 24px 70px; }
   .tech-icon { margin-bottom: 25px; }
   .achievement-section { padding: 35px 0 85px; }
-  .achievement-panel { min-height: 520px; padding: 39px 25px; }
+  .achievement-panel { padding: 39px 25px 30px; }
   .achievement-copy h2 { font-size: 39px; }
   .achievement-copy p { font-size: 12px; }
-  .achievement-badge { right: -55px; bottom: -55px; }
+  .achievement-badge { width: 210px; height: 210px; }
   .contact-section { padding: 85px 0; }
   .contact-inner h2 { font-size: 42px; }
   .contact-side-note { flex-wrap: wrap; white-space: normal; font-size: 8px; }
