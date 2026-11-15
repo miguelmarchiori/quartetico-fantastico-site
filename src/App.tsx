@@ -141,7 +141,7 @@ function Hero() {
             Somos uma equipe de estudantes que transforma curiosidade em engenharia, código e robôs autônomos preparados para desafios reais.
           </motion.p>
           <motion.p className="hero-location" initial="hidden" animate="visible" variants={reveal} transition={{ delay: 0.12 }}>
-            <MapPin size={15} /> SESI Apucarana <span className="topline-divider" /> OBR 2025 · Modalidade Resgate
+            <MapPin size={15} /> SESI Apucarana <span className="topline-divider" /> Campeã regional OBR 2026
           </motion.p>
         </div>
         <div className="hero-title-wrap">
@@ -180,7 +180,7 @@ function About() {
           <h2>Ideias que ganham forma.<br /><span>Robôs que ganham missão.</span></h2>
         </motion.div>
         <motion.div className="about-copy" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={reveal}>
-          <p className="lead-copy">O Quarteto Fantástico é uma equipe de robótica do SESI Apucarana, no Paraná, que disputou em 2025 a modalidade Resgate da Olimpíada Brasileira de Robótica (OBR).</p>
+          <p className="lead-copy">O Quarteto Fantástico é uma equipe de robótica do SESI Apucarana, no Paraná, criada em 2025, que compete na modalidade Resgate da Olimpíada Brasileira de Robótica (OBR).</p>
           <p>Nosso trabalho une construção, programação e muitos testes. Montamos o robô com LEGO SPIKE Prime e o programamos em Python para seguir a pista, desviar de obstáculos e cumprir a missão de resgate sem nenhuma ajuda humana.</p>
           <a className="text-link" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">Veja os bastidores da equipe <ArrowUpRight size={16} /></a>
         </motion.div>
@@ -188,7 +188,7 @@ function About() {
       <div className="shell about-bottom">
         <div className="about-mark"><img src="./images/brasao-quarteto.png" alt="" /></div>
         <div className="about-statement"><span>APUCARANA · PARANÁ · BRASIL</span><strong>Aprender fazendo.<br />Evoluir testando.</strong></div>
-        <div className="about-stat"><strong>2025</strong><span>Temporada<br />OBR Resgate</span></div>
+        <div className="about-stat"><strong>2025</strong><span>Ano de<br />criação</span></div>
       </div>
     </section>
   );
@@ -415,15 +415,15 @@ function Achievement() {
         <div className="achievement-glow" />
         <motion.div className="achievement-copy" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={reveal}>
           <SectionLabel number="04">NOSSA TRAJETÓRIA</SectionLabel>
-          <span className="eyebrow">CONQUISTA REGIONAL · 2025</span>
+          <span className="eyebrow">CONQUISTA REGIONAL · 2026</span>
           <h2>Uma etapa vencida.<br /><ShinyText>Novos desafios pela frente.</ShinyText></h2>
-          <p>Em 2025, a equipe foi campeã da etapa regional da OBR no Norte do Paraná. Uma conquista construída com colaboração, dedicação e muita vontade de aprender.</p>
+          <p>Em 2026, a equipe foi campeã da etapa regional da OBR no Norte do Paraná. Uma conquista construída com colaboração, dedicação e muita vontade de aprender.</p>
           <a className="button button-primary" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">Acompanhe nossa jornada <ArrowUpRight size={16} /></a>
         </motion.div>
         <motion.div className="achievement-badge" initial={{ opacity: 0, scale: 0.9, rotate: -5 }} whileInView={{ opacity: 1, scale: 1, rotate: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, ease: 'easeOut' }}>
           <div className="badge-orbit badge-orbit-one" />
           <div className="badge-orbit badge-orbit-two" />
-          <div className="badge-core"><Trophy size={46} strokeWidth={1.2} /><span>OBR 2025</span><small>REGIONAL · NORTE PR</small></div>
+          <div className="badge-core"><Trophy size={46} strokeWidth={1.2} /><span>OBR 2026</span><small>REGIONAL · NORTE PR</small></div>
         </motion.div>
       </div>
     </section>
@@ -440,7 +440,7 @@ function Contact() {
           <p>Quer acompanhar nossos projetos, conhecer os bastidores ou conversar sobre robótica? Encontre a equipe nas redes.</p>
           <a className="button button-primary contact-button" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">Siga @quartetofantastico_sesi <ArrowUpRight size={17} /></a>
         </motion.div>
-        <div className="contact-side-note"><RadioTower size={18} /><span>APUCARANA / PR</span><i /> <span>OBR RESGATE 2025</span></div>
+        <div className="contact-side-note"><RadioTower size={18} /><span>APUCARANA / PR</span><i /> <span>OBR RESGATE</span></div>
       </div>
     </section>
   );
